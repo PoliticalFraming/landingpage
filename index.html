@@ -1,89 +1,161 @@
-{% extends "_base.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Bootstrap 3, from LayoutIt!</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
 
-{% block content %}
+	<!--link rel="stylesheet/less" href="less/bootstrap.less" type="text/css" /-->
+	<!--link rel="stylesheet/less" href="less/responsive.less" type="text/css" /-->
+	<!--script src="js/less-1.3.3.min.js"></script-->
+	<!--append ‘#!watch’ to the browser URL, then refresh the page. -->
+	
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+
+  <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+  <![endif]-->
+
+  <!-- Fav and touch icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/apple-touch-icon-144-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/apple-touch-icon-114-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/apple-touch-icon-72-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" href="img/apple-touch-icon-57-precomposed.png">
+  <link rel="shortcut icon" href="img/favicon.png">
+  
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/scripts.js"></script>
+</head>
+
+<body>
 <div class="container">
-  <h1>Welcome to your new Tarbell project</h1>
+	<div class="row clearfix">
+		<div class="col-md-12 column">
+			<div class="page-header">
+				<h1>
+					<div>
+						<span>Political Framing</span>
+					</div>
+					<div>
+						<small>A machine learning tool to find trends in congressional rhetoric.</small>
+					</div>
+				</h1>
+			</div>
+			<div class="row clearfix">
+				<div class="col-md-6 column">
+			<!-- 		<h2>
+						Become an Alpha Tester!
+					</h2> -->
+					<p>
+						Political Framing is a tool to allow journalists to use unique NLP and AI based algorithms to research the progression of rhetoric in the congressional record. If you are interested in <strong> becoming an alpha tester </strong> and helping us to turn our algorithms into useful tools for the newsroom, please leave your email address below and we will contact you with an invitation.
+					</p>
+					<p>
+					<a class="btn" href="http://www.politicalframingblog.com">Visit our Blog! »</a>
+					</p>
+					<form class="form-horizontal" role="form">
+						<div class="form-group">
+							<div class="col-sm-8">
+								<label for="inputEmail" class="col-sm-2 control-label">Email</label>
+								<input type="email" class="form-control" id="inputEmail">
+								<br/>
+								<button type="submit" class="btn btn-default">Sign Up!</button>
 
-  <p><em>Override this sample content and starting building by editing or replacing <code>{{ PROJECT_PATH }}/{{ PATH }}</code>.</em> 
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="col-sm-offset-2 col-sm-10">
+							</div>
+						</div>
+					</form>
 
-  <p>To change this project's S3 configuration or default context, edit <code>{{ PROJECT_PATH }}/tarbell_config.py</code>.</p>
 
-  <h3>Template basics</h3>
+<!-- 					<form action="https://docs.google.com/forms/d/1_8A0uPLtjlsBxFrpGnxVGZaZB8dJtOH2LwFPMFm5gZo/formResponse" method="POST" id="ss-form" target="_self" onsubmit="">
+						<ol role="list" class="ss-question-list" style="padding-left: 0">
+							<div class="ss-form-question errorbox-good" role="listitem">
+								<div dir="ltr" class="ss-item  ss-text"><div class="ss-form-entry">
+									<label class="ss-q-item-label" for="entry_1843911743"><div class="ss-q-title">Name
+								</div>
+								<div class="ss-q-help ss-secondary-text" dir="ltr"></div></label>
+									<input type="text" name="entry.1843911743" value="" class="ss-q-short" id="entry_1843911743" dir="auto" aria-label="Name  " title="">
+									<div class="error-message"></div>
+									<div class="required-message">This is a required question</div>
+									</div>
+								</div>
+							</div>
+							<div class="ss-form-question errorbox-good" role="listitem">
+								<div dir="ltr" class="ss-item  ss-text">
+									<div class="ss-form-entry">
+										<label class="ss-q-item-label" for="entry_267824983">
+											<div class="ss-q-title">Email</div>
+											<div class="ss-q-help ss-secondary-text" dir="ltr"></div>
+										</label>
+										<input type="text" name="entry.267824983" value="" class="ss-q-short" id="entry_267824983" dir="auto" aria-label="Email  " title="">
+										<div class="error-message"></div>
+										<div class="required-message">This is a required question</div>
+									</div>
+								</div>
+							</div>
+					
+							<div class="ss-form-question errorbox-good" role="listitem">
+								<div dir="ltr" class="ss-item  ss-text">
+									<div class="ss-form-entry">
+										<label class="ss-q-item-label" for="entry_1105779185">
+											<div class="ss-q-title">Organization</div>
+											<div class="ss-q-help ss-secondary-text" dir="ltr"></div>
+										</label>
+										<input type="text" name="entry.1105779185" value="" class="ss-q-short" id="entry_1105779185" dir="auto" aria-label="Organization  " title="">
+										<div class="error-message"></div>
+										<div class="required-message">This is a required question</div>
+									</div>
+								</div>
+							</div>
 
-  <p>Tarbell uses <a href="http://jinja.pocoo.org/">Jinja2</a> for templating. Read the <a href="http://jinja.pocoo.org/docs/">excellent documentation</a> to learn more about using Jinja.
+							<div class="ss-form-question errorbox-good" role="listitem">
+								<div dir="ltr" class="ss-item  ss-text">
+									<div class="ss-form-entry">
+										<label class="ss-q-item-label" for="entry_1103433451">
+											<div class="ss-q-title"></div>
+											<div class="ss-q-help ss-secondary-text" dir="ltr"></div>
+										</label>
+										<input type="text" name="entry.1103433451" value="" class="ss-q-short" id="entry_1103433451" dir="auto" aria-label="  " title="">
+										<div class="error-message"></div>
+										<div class="required-message">This is a required question</div>
+									</div>
+								</div>
+							</div>
 
-  <p>This base template uses the <a href="http://getbootstrap.com/">Twitter Bootstrap</a> CSS framework.</p>
+							<input type="hidden" name="draftResponse" value="[,,&quot;4773031791581480317&quot;]">
+							<input type="hidden" name="pageHistory" value="0">
+							<input type="hidden" name="fromEmail" value="false">
+							<input type="hidden" name="fbzx" value="4773031791581480317">
 
-  <h3>Overriding the base template</h3>
+							<div class="ss-item ss-navigate">
+								<table id="navigation-table">
+									<tbody>
+										<tr>
+											<td class="ss-form-entry goog-inline-block" id="navigation-buttons" dir="ltr">
+												<input type="submit" name="submit" value="Submit" id="ss-submit">
+												<div class="ss-password-warning ss-secondary-text">Never submit passwords through Google Forms.</div>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</ol>
+					</form> -->
 
-  <p>All files in the <code>_base</code> directory are available from the root path of the preview server and published project. So <code>_base/css/base.css</code> can be previewed <code>http://localhost:5000/css/base.css</code>. However, if you create a file with the same name and path relative to your project directory, this file will be served up instead.</p>
-
-  <p>This base template comes with basic template snippets that are intended to be overridden. To add a custom header or footer for your project, simply copy <code>_base/_nav.html</code> or <code>_base/_footer.html</code> into your project directory and edit it, or create your own.</p>
-
-  <h3>Hiding files from publication</h3>
-
-  <p>Files and directories prefixed with an underscore (<code>_</code>) as well as any file pattern specified in <code>tarbell_config.py</code> will not be published. These files can still be previewed locally.</p>
-
-  <h3>Working with context variables</h3>
-
-  {% if SPREADSHEET_KEY %}
-  <p>This project uses Google spreadsheets to manage context variables. The spreadsheet <a href="https://docs.google.com/spreadsheet/ccc?key={{ SPREADSHEET_KEY }}#gid=0" target="_BLANK">can be edited here</a>.</p>
-  {% else %}
-  <p>This project does not use Google spreadsheets to manage context variables. They must be set in the <code>DEFAULT_CONTEXT</code> section of <code>{{ PROJECT_PATH }}/tarbell_config.py</code>.</p>
-  {% endif %}
-
-  <p>In the <em>values</em> worksheet, there are columns named <code>key</code> and <code>value</code>. Every value is available to the template by referencing the key. Here's an example:</p>
-
-  <p>The key is <code>headline</code> and the value <strong>{{ headline }}</strong>.</p>
-  <p>Print this headline in your code with something like <code>{{ "<strong>{{ headline }}</strong>" }}</code>.
-
-<div class="row">
-  <div class="col-md-6">
-    <h3>Access data with a loop:</h3>
-    <p><em>Use the worksheet name to access data.</em></p>
-
-<pre>
-{{ "{% for row in data %}" }}
-{{ "<p>" }}
-{{ "  <strong>{{ row.column1 }}</strong>:" }}
-{{ "  {{ row.column2 }}" }}
-{{ "</p>" }}
-{{ "{% endfor %}" }}
-</pre>
-
-    <p>Output:</p>
-
-    {% for row in data %}
-    <p>
-      <strong>{{ row.column1 }}:</strong>
-      {{ row.column2 }}
-    </p>
-    {% endfor %}
-  </div>
-  <div class="col-md-6">
-    <h3>Access data by key</h3>
-    <p><em>Requires a column named <code>key</code>.</em></p>
-
-<pre>
-{{ "<p>" }}
-{{ "  <strong>key1, column 1</strong>:" }} 
-{{ "  {{ keyed_data.key1.column1 }}" }}
-{{ "</p>" }}
-{{ "<p>" }}
-{{ "  <strong>key2, column 2</strong>:" }} 
-{{ "  {{ keyed_data.key2.column2 }}" }}
-{{ "</p>" }}
-</pre>
-
-    <p>Output:</p>
-    <p>
-      <strong>key1, column 1</strong>:
-      {{ keyed_data.key1.column1 }}
-    </p>
-    <p>
-      <strong>key2, column 2</strong>:
-      {{ keyed_data.key2.column2 }}</p>
-  </div>
+				</div>
+				<div class="col-md-6 column">
+					<img alt="140x140" src="img/capitol.jpg" class="img-rounded img-responsive" width="100%">
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
-{% endblock content %}
-
+</body>
+</html>
